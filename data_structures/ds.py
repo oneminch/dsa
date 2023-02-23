@@ -1,5 +1,5 @@
-# from data_structures.queue import Queue
-# from data_structures.stack import Stack
+from data_structures.queue import Queue
+from data_structures.stack import Stack
 from data_structures.array import Array
 from data_structures.hash_table import HashTable
 from data_structures.singly_linked_list import LinkedList
@@ -78,3 +78,56 @@ def doubly_linked_list_ds():
 
     print("\nDoubly Linked List: ", dll)
     print("\nDoubly Linked List (Array): ", dll.listify())
+
+
+def stack_ds():
+    stk = Stack()
+
+    print(f"\nIs the stack empty? {stk.is_empty()}")
+
+    stk.push(3)
+    stk.push(2)
+    stk.push(1)
+    stk.push(8)
+    stk.push(5)
+
+    print("\nPushed 5 items")
+    print("\nStack: ", stk)
+    print("\nStack (Array): ", stk.listify())
+    
+    stk.pop()
+    stk.pop()
+
+    print("\nPopped 2 items")
+    print("\nStack: ", stk)
+    print("\nStack (Array): ", stk.listify())
+
+    print(f"\nPeek: {stk.peek()}")
+    print(f"\nIs the stack empty? {stk.is_empty()}")
+    
+
+
+def queue_ds():
+    q = Queue()
+
+    print(f"\nIs the queue empty? {q.is_empty()}")
+
+    q.enqueue(1)
+    q.enqueue(2)
+    q.enqueue(3)
+    q.enqueue(4)
+    q.enqueue(5)
+
+    print("\nEnqueued 5 items")
+    print("\nQueue: ", q)
+    print("\nQueue (Array): ", q.listify())
+    
+    q.dequeue()
+    q.dequeue()
+
+    print("\nDequeued 2 items")
+    print("\nQueue: ", q)
+    print("\nQueue (Array): ", q.listify())
+
+    print(f"\nPeek: {q.peek()}")
+    print(f"\nIs the queue empty? {q.is_empty()}")

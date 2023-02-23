@@ -8,15 +8,17 @@ Which data structure / algorithm would you like to check out next?
 2) Hash Table
 3) Singly Linked List
 4) Doubly Linked List
+5) Stack
+6) Queue
 \n--- ALGORITHMS --------\n
-5) Binary Search
+8) Binary Search
 """
 
 while True:
     print(prompt)
     choice = int(input("Choose from 1 - 5 to continue and '0' to quit: "))
 
-    if choice not in range(0, 6):
+    if choice not in range(0, 7):
         continue
 
     if choice == 0:
@@ -31,4 +33,8 @@ while True:
     elif choice == 4:
         doubly_linked_list_ds()
     elif choice == 5:
+        stack_ds()
+    elif choice == 6:
+        queue_ds()
+    elif choice == 8:
         bs_algo()
