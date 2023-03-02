@@ -1,9 +1,11 @@
-from data_structures.queue import Queue
-from data_structures.stack import Stack
 from data_structures.array import Array
-from data_structures.hash_table import HashTable
-from data_structures.singly_linked_list import LinkedList
+from data_structures.binary_search_tree import BST
 from data_structures.doubly_linked_list import DoublyLinkedList
+from data_structures.graph import Graph
+from data_structures.hash_table import HashTable
+from data_structures.queue import Queue
+from data_structures.singly_linked_list import LinkedList
+from data_structures.stack import Stack
 
 
 def array_ds():
@@ -44,7 +46,7 @@ def hash_table_ds():
     print("\nKeys: ", ht.keys())
 
 
-def linked_list_ds():
+def singly_linked_list_ds():
     ll = LinkedList(14)
 
     ll.append(16)
@@ -131,3 +133,41 @@ def queue_ds():
 
     print(f"\nPeek: {q.peek()}")
     print(f"\nIs the queue empty? {q.is_empty()}")
+
+def bst_ds():
+    print("BSTs aren't implemented accurately yet.")
+    
+    bt = BST()
+
+    bt.insert(20)
+    bt.insert(4)
+    bt.insert(9)
+    bt.insert(1)
+    bt.insert(170)
+    bt.insert(6)
+    bt.insert(15)
+
+    print("\nBinary Search Tree: ", bt)
+
+def graph_ds():
+    g = Graph()
+
+    g.add_vertex("0")
+    g.add_vertex("1")
+    g.add_vertex("2")
+    g.add_vertex("3")
+    g.add_vertex("4")
+    g.add_vertex("5")
+    g.add_vertex("6")
+
+    g.add_edge("3", "1")
+    g.add_edge("3", "4")
+    g.add_edge("4", "2")
+    g.add_edge("4", "5")
+    g.add_edge("1", "2")
+    g.add_edge("1", "0")
+    g.add_edge("0", "2")
+    g.add_edge("6", "5")
+
+    g.show_adjacency_list()
+    
